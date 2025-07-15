@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==== Blog Section ==== -->
+  <div id="blog-section" class="box">
+    <h1>📝 My Blog</h1>
+
+    <!-- Search bar -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search posts..."
+      oninput="filterPosts()"
+    />
+
+    <!-- Post‑creation form -->
+    <form id="postForm">
+      <input type="text" id="title"   placeholder="Post Title"   required />
+      <input type="text" id="author"  placeholder="Author Name" required />
+      <input type="url"  id="image"   placeholder="Image URL"   required />
+      <textarea id="content" placeholder="Post Content" required></textarea>
+
+      <!-- Optional bullet points -->
+      <input type="text" id="b1" placeholder="Bullet Point 1 (optional)" />
+      <input type="text" id="b2" placeholder="Bullet Point 2 (optional)" />
+      <input type="text" id="b3" placeholder="Bullet Point 3 (optional)" />
+
+      <button type="submit">Create Post</button>
+    </form>
+
+   <!-- No change needed here except ensure postsGrid is present -->
+    <div id="postsGrid" class="blog-container"></div>
+
+  </div>
+
+  <!-- ==== Pre‑seeded Example Posts ==== -->
+  <main class="blog-container">
+
+    <!-- Blog Post 1 -->
+    <article class="blog-post post-purple">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/347/small_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg" alt="Nature">
+      <h2 class="post-title">Exploring the Beauty of Nature</h2>
+      <p class="post-meta">By Sanskruti | July&nbsp;4,&nbsp;2025</p>
+      <ul class="post-points">
+        <li>Mountains and rivers calm the soul</li>
+        <li>Nature teaches patience and peace</li>
+        <li>Reconnect with the environment</li>
+      </ul>
+      <p class="post-content">
+        Nature is not just a place to visit, it is home. Nature is everything around us that makes life possible and beautiful.
+        It includes the air we breathe, the weather we feel, the plants, animals, and everything we see outside.
+        We call it "Mother Nature" because, like a mother, it provides us with everything we need, such as food, clothes,
+        and shelter. <a href="#">Read more...</a>
+      </p>
+    </article>
+
+    <!-- Blog Post 2 -->
+    <article class="blog-post post-blue">
+      <img src="https://elearningindustry.com/wp-content/uploads/2022/11/shutterstock_1798672534.jpg" alt="Tech">
+      <h2 class="post-title">The Future of Tech</h2>
+      <p class="post-meta">By Admin | July&nbsp;3,&nbsp;2025</p>
+      <ul class="post-points">
+        <li>AI is reshaping industries</li>
+        <li>Quantum computing on the rise</li>
+        <li>Tech ethics matter more than ever</li>
+      </ul>
+      <p class="post-content">
+        Staying ahead in tech requires curiosity and adaptability. Technology is the application of conceptual knowledge
+        to achieve practical goals, especially in a reproducible way. The word technology can also mean the products
+        resulting from such efforts, including both tangible tools such as utensils or machines, and intangible ones
+        such as software. <a href="#">Explore more...</a>
+      </p>
+    </article>
+
+  </main>
+
+  <!-- ==== JavaScript ==== -->
+  <script src="script.js"></script>
+</body>
+</html>
